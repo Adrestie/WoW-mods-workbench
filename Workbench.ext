@@ -1,5 +1,5 @@
 --[[
-    The workbench, a component shared by the modules of this repository.
+    The workbench, a component the WoW-mods modules share.
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by

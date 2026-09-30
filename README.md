@@ -1,6 +1,6 @@
 # The workbench
 
-A component shared by the modules of this repository: ONE object in the
+A component shared by the [WoW-mods](https://github.com/Adrestie/WoW-mods) modules: ONE object in the
 world (game object 810000), ONE window, and any number of modules bringing
 their recipes to it. None of them owns it.
 
@@ -14,6 +14,10 @@ Every module that uses the bench ships an identical copy of this folder as
 when it is absent or older, and removes it when no other provider remains.
 The object's template is shipped by every such module too, inserted only
 when absent, and removed by the last one to go.
+
+A module's repository takes this folder through `git subtree`, so a clone or
+a download of the module holds it; after a change here, each module runs
+`git subtree pull --prefix=data/lua/Workbench https://github.com/Adrestie/WoW-mods-workbench.git main --squash`.
 
 A module registers itself as a provider from its own Lua:
 
