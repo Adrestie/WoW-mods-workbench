@@ -9,6 +9,12 @@ before every `.lua`, so a module's provider finds the global `Workbench`
 ready -- and `Workbench_Client.lua` the window, sent over AIO. `VERSION` is
 an integer; an installer replaces a copy in place only by a newer one.
 
+**Requirements:** the bench is pure Lua, so the server needs
+[ALE](https://github.com/azerothcore/mod-ale) (the AzerothCore Lua Engine,
+formerly mod-eluna) to run it, and [AIO](https://github.com/Rochet2/AIO) on
+both sides: `AIO_Server` in `lua_scripts`, and the `AIO_Client` addon on every
+player's client. Without them the bench's object does nothing.
+
 Every module that uses the bench ships an identical copy of this folder as
 `data/lua/Workbench/`, and its installer places it in `lua_scripts/Workbench/`
 when it is absent or older, and removes it when no other provider remains.
